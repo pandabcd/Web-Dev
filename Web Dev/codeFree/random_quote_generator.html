@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 0initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="quote.css">
+   <title> Random Quotes </title>
+  </head>
+  
+
+  <body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  <div class="quote-box">
+    <i class="fa fa-quote-left">
+    </i>
+    <span > This is a quote </span>
+    <button onclick="getNewQuote()" class="btn-primary"> New Quote </button>
+  </div>
+    <script> 
+      
+      function getNewQuote(){
+        var newColor = getRandomColor();
+        document.body.style.backgroundColor = newColor;
+      }
+
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+	}
+     </script>
+  </body>
+  
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title> My Website </title>
+	<h1> FAQS</h1>
+</head>
+
+
+<body >
+
+	<Button onclick="Click_Function()"> Click Me</Button>
+	<script >
+
+		function Click_Function(){
+			document.getElementById("Writer").innerHTML=  "I Rock";
+		}
+
+	</script>
+
+	<p id="Writer"> Hello </p>
+
+
+	
+	<nav id= "links">
+		<ul>
+			<li><a href="index.html"> Home </a></li>
+			<li><a href="index.html"> FAQS </a></li>
+			<li><a href="index.html"> Contact Us </a></li>
+			<li><a href="index.html"> Settings </a></li>
+			<li><a href="index.html"> My Account </a></li>
+		</ul>
+	</nav>
+	
+
+	<!-- VIDEO WIDGET-->
+	<video onclick="togglePlay()"  id="myVideo"  width="480px">
+		<source src="toothbrush.mp4" type="video/mp4">
+	</video>
+	<div style="display:block">
+	<button onclick="play()">Play </button>
+	<button onclick="pause()">Pause </button>
+	<button onclick="rewind()"> Rewind </button>
+	<button onclick="ffw()"> FFW </button>
+	<button onclick="faster()">Speed Up </button>
+	<button onclick="slower()"> Speed Down</button>
+	<button onclick="stop()">Stop </button>
+	<button onclick="togglePlay()"> Toggle Play </button>
+
+	</div>
+	<p id="speed" style="color:blue" > Speed= 1.0</p>
+	<!-- VIDEO WIDGET-->
+
+	<script type="text/javascript">
+		var video = document.getElementById("myVideo");
+
+		function togglePlay(){
+			if(video.paused== true){
+				video.play();
+				changeBackgroundColor("play");
+			}
+			else{
+				video.pause();
+				changeBackgroundColor("Pause");
+			}
+		}
+
+		function play(){
+			video.play();
+			changeBackgroundColor("play");
+		}
+
+		function pause(){
+			video.pause();
+			changeBackgroundColor("Pause");
+		}
+
+		function rewind(){
+			video.currentTime-= 2;
+		}
+
+		function ffw(){
+			video.currentTime+= 2;
+		}
+
+		function stop(){
+			video.pause();
+			video.currentTime= 0;
+		}
+
+		function faster(){
+			video.playbackRate+= 0.5;
+			displaySpeed();
+		}
+
+		function slower(){
+			video.playbackRate-= 0.5;
+			displaySpeed(-2);
+		}
+
+		function displaySpeed(){
+			document.getElementById("speed").innerHTML="Speed ="+ video.playbackRate;
+		}
+
+		function changeBackgroundColor( order){
+				if(order=="play"){
+					document.body.style.background = "grey";
+				}
+				else{
+					document.body.style.background = "silver";
+					li.style.background="red";
+					document.getElementsByTagName("nav").setAttribute("style","color:green");
+				
+				}
+		}
+
+	</script>
+
+
+	<p class="Question"> Q? 1. Can you tell me a little about yourself?</p>
+	<p class="Answer"> This question seems simple, so many people fail to prepare for it, but it's crucial. Here's the deal: Don't give your complete employment (or personal) history. Instead give a pitch—one that’s concise and compelling and that shows exactly why you’re the right fit for the job. Start off with the 2-3 specific accomplishments or experiences that you most want the interviewer to know about, then wrap up talking about how that prior experience has positioned you for this specific role.</p>
+
+	<br>
+
+	<p class="Question"> Q? How did you hear about the position?</p>
+	<p class="Answer"> Another seemingly innocuous interview question, this is actually a perfect opportunity to stand out and show your passion for and connection to the company. For example, if you found out about the gig through a friend or professional contact, name drop that person, then share why you were so excited about it. If you discovered the company through an event or article, share that. Even if you found the listing through a random job board, share what, specifically, caught your eye about the role.</p>
+
+	<br>
+
+	<p class="Question"> Q? What do you know about the company?</p>
+	<p class="Answer"> Any candidate can read and regurgitate the company’s “About” page. So, when interviewers ask this, they aren't necessarily trying to gauge whether you understand the mission—they want to know whether you care about it. Start with one line that shows you understand the company's goals, using a couple key words and phrases from the website, but then go on to make it personal. Say, “I’m personally drawn to this mission because…” or “I really believe in this approach because…” and share a personal example or two. </p>
+
+
+	<script type="text/javascript">
+		document.write(" Written by javascript");
+	</script>
+
+</body>
+
+
+</html>

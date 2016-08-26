@@ -1,0 +1,55 @@
+h1{
+	text-align: center;
+	width: 100%;
+    background-color: grey;
+    color: black;
+    padding:0;
+}
+
+/*
+nav{
+	color: black;
+	background-color: grey;
+	
+}*/
+
+
+ul{
+	list-style-type: none;
+	
+    /*margin: 0;
+    padding: 0;
+    width:6px;*/
+}
+
+
+li a{
+	color: black;
+	background-color: grey;
+	list-style-type: none;
+	align-content: left;
+	margin:0px;
+	padding:0px;
+	display: block;
+	width:0 px;
+}
+
+
+
+body{
+	/*background-image: url("tiger.jpg"), url("lion.jpg")  no-repeat ; */
+	background-color: grey;
+}
+
+.Question{
+	color: black;
+	font-weight: bold;
+	/*background-color: grey; */
+}
+
+.Answer{
+	background-color: grey;
+	lighting-color: blue;
+	border-color: green;
+	color: brown;
+}
